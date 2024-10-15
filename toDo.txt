@@ -1,0 +1,16 @@
+Make the game fun somehow and make the game playable for a while: play as long as you want.
+GAME SHOULDN'T GET BORING !!
+
+Operation Explore important stuffs and core elements:
+
+Spaceship build stuff, duh : tilesheet, electricity, physics
+Planets!! : Random cities
+
+Maybies?
+
+Aliens `\_(._.)_/`
+
+Other stuff??
+
+2d multi-layer cool stuff
+browser based: optimize lots!!
