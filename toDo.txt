@@ -14,3 +14,112 @@ Other stuff??
 
 2d multi-layer cool stuff
 browser based: optimize lots!!
+
+Stuff me and Ethan came up with:
+
+Tiles
+    Solid
+
+    Planet
+
+    Electrical
+
+    Electrical Recieving
+
+Player
+
+    Arsenal
+
+        GTA Style weapon wheel?
+
+Planets
+
+    Biomes
+
+    Friendly
+
+Wires
+    Extentions
+
+    Branches (+)
+
+        Power diffusion
+
+Asteroids / space debris
+
+    Has Minerals?
+
+    Reusable
+
+Map
+    Enlarged
+
+    Mini
+
+    Icons
+
+Projectiles 
+
+    Objects
+
+    Lasers
+
+    Missiles
+
+Enemies
+
+    Bounty Hunters
+
+    AI
+
+    Homeland
+
+Light-Emmiters
+
+    Color
+
+    Power
+
+Crafting Menu
+
+    TODO
+
+Space suits
+
+    Air Filtering
+
+    Air Providing
+
+    Armor??
+
+Air
+    Toxic
+
+    Freezing
+
+    Normal (duh)
+
+    Hot??
+
+Sheilds
+
+    Durability
+
+    Deflects?
+
+Space colonies
+
+    Friendly
+    Shopes
+
+Health and condidtions
+
+    How to see?
+
+Missions
+
+    TODO
+
+Basic story?
+
+    TODO
