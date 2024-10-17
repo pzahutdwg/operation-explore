@@ -26,6 +26,12 @@ Tiles
 
     Electrical Recieving
 
+Light-Emmiters
+
+    Color
+
+    Power
+
 Player
 
     Arsenal
@@ -73,12 +79,6 @@ Enemies
     AI
 
     Homeland
-
-Light-Emmiters
-
-    Color
-
-    Power
 
 Crafting Menu
 
