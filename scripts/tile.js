@@ -1,5 +1,3 @@
-let tiles = [];
-
 class Tile  {
     constructor(x, y, z, tile, sheet) {
 

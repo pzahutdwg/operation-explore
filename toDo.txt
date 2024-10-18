@@ -56,6 +56,8 @@ Player
 
         Weapon Upgrades? it will help give more customization and give more content if we go with a small Arsenal.
 
+    Ragdoll physics?
+
 Planets
 
     Biomes
