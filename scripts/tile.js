@@ -1,4 +1,6 @@
-class Tile {
+let tiles = [];
+
+class Tile  {
     constructor(x, y, z, tile, sheet) {
 
         this.x = x;
@@ -22,6 +24,9 @@ class Tile {
         this.tileY = Math.floor(tile / this.sheetW);
 
     }
+    
+    // TODO physics
+    // https://www.youtube.com/watch?v=01E0RGb2Wzo
 
     draw() {
         ctx.drawImage(this.tileSheet, this.tileX * 32, this.tileY * 32, 32, 32, this.x - cameraX, this.y - cameraY, 32, 32);
