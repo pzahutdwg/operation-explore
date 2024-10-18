@@ -142,4 +142,10 @@ Basic story?
 
 Settings
 Camera
+<<<<<<< HEAD
 Keybinds
+=======
+Keybinds
+
+ethan sigma waz here lol
+>>>>>>> 13c522bcca0174ce49f37ec724a0e9d27e2c62e7
