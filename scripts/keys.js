@@ -1,7 +1,7 @@
 class Keys {
     constructor() {
         document.addEventListener('keydown', function(e) {
-            self.handle(e);
+            this.handle(e);
         });
     }
 

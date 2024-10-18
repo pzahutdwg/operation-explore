@@ -142,4 +142,4 @@ Basic story?
 
 Settings
 Camera
-Kaybinds
+Keybinds
