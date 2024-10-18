@@ -142,4 +142,6 @@ Basic story?
 
 Settings
 Camera
-Kaybinds
+Keybinds
+
+ethan sigma waz here lol
