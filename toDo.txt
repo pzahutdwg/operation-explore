@@ -42,9 +42,19 @@ Light-Emmiters
 
 Player
 
+    Mouse Controls Arm Movement/Gun Aim
+
+    Mouse Also Controls Camera
+
     Arsenal
 
         GTA Style weapon wheel?
+
+        Small Arsenal or not a huge amount of guns to worry about
+
+        Grenades
+
+        Weapon Upgrades? it will help give more customization and give more content if we go with a small Arsenal.
 
 Planets
 
