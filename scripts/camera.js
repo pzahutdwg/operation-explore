@@ -1,5 +1,5 @@
 // Camera follows a player and it's mouse
-// If the player is in build mode, show the outline and enable placing blocks
+// Handles tile placement too
 
 let mouseX = 0
 let mouseY = 0
@@ -9,13 +9,17 @@ canvas.addEventListener('click', (e) => {
         tiles.push(new Tile(e.clientX - 16, e.clientY - 16, 0, 0, 'img/tiles/tiles.png'))
     }
 })
+
 canvas.addEventListener('mousedown', () => {
-    if (player.mode != 'building') {
-        player.aiming = true;
+    console.log(player.mode)
+    if (player.mode == 'none') {
+        player.mode = 'aiming';
     }
+    console.log(player.mode)
 })
 
 canvas.addEventListener('mouseup', () => {
+    if (player.mode == 'aiming') { player.mode = 'none' }
     cameraX = 0;
     cameraY = 0;
 })
@@ -27,11 +31,10 @@ canvas.addEventListener('mousemove', (e) => {
         cameraX = e.clientX - player.x
         cameraY = e.clientY - player.y
     }
-    else {  
-        cameraX = 0;
-        cameraY = 0;
-
+    else {
         mouseX = e.clientX;
         mouseY = e.clientY;
     }
 })
+
+// TODO: Linear <insert nerd word>

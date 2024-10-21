@@ -17,7 +17,7 @@ document.addEventListener('keydown', function (e) {
             console.log(player.mode)
 
             if (player.mode == 'building') {
-                player.mode = 'aiming';
+                player.mode = 'none';
             } 
             else 
             {
@@ -29,4 +29,4 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// TODO: Keybinding, settings screen
+// TODO: keybinding, settings screen
