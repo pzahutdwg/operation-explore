@@ -23,6 +23,6 @@ class Player {
     }
 
     draw() {
-        ctx.drawImage(this.img, this.x - cameraX, this.y - cameraY);
+        ctx.drawImage(this.img, this.x - cameraX - 26, this.y - cameraY - 42);
     }
 }

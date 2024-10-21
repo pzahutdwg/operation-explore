@@ -32,8 +32,8 @@ class Wire {
     //TODO Physics
 
     draw() {
-        ctx.drawImage(this.startImg, this.startX, this.startY);
-        ctx.drawImage(this.endImg, this.endX, this.endY);
+        ctx.drawImage(this.startImg, this.startX - 26 - cameraX, this.startY - 26 - cameraY);
+        ctx.drawImage(this.endImg, this.endX - 26 - cameraX, this.endY - 26 - cameraY);
     }
 
 }

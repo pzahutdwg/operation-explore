@@ -56,9 +56,12 @@ function main() {
         wires[i].draw();
     }
 
-    //! Show the build outline AFTER EVERYTHING ELSE
+    //! Show the build outlines AFTER EVERYTHING ELSE
     if (player.mode == 'building') {
-        ctx.drawImage(buildOutline, mouseX - 16, mouseY - 16);
+        ctx.drawImage(buildOutline, mouseX - 26, mouseY - 26);
+    }
+    else if (player.mode == 'wire') {
+
     }
 
     requestAnimationFrame(main);
