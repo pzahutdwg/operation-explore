@@ -2,9 +2,11 @@
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 
-
 let cameraX = 0;
 let cameraY = 0;
+
+const buildOutline = new Image()
+buildOutline.src = 'img/tiles/outline.png'
 
 const player = new Player(400, 300, 0, 100, 'img/sprites/person_placeholder.png', []);
 
@@ -48,6 +50,11 @@ function main() {
         if (tile.z == -1) {
             tile.draw();
         }
+    }
+
+    // Show the build outline
+    if (player.mode == 'building') {
+        ctx.drawImage(buildOutline, mouseX - 16, mouseY - 16)
     }
 
     requestAnimationFrame(main);

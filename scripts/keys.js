@@ -1,5 +1,5 @@
 
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     switch (e.key) {
         case 'w':
             // Move up
@@ -14,8 +14,17 @@ document.addEventListener('keydown', function(e) {
             // Move right
             break;
         case 'f':
-            player.building = !player.building;
-            // Interact
+            console.log(player.mode)
+
+            if (player.mode == 'building') {
+                player.mode = 'aiming';
+            } 
+            else 
+            {
+                player.mode = 'building';
+            }
+
+            console.log(player.mode);
             break;
     }
 });

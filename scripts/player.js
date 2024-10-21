@@ -12,8 +12,7 @@ class Player {
         this.health = health;
         this.inv = inv;
 
-        this.aiming = false;
-        this.building = false;
+        this.mode = 'aiming';
 
         this.img = new Image();
         this.img.src = img;
