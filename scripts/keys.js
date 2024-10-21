@@ -1,30 +1,38 @@
-class Keys {
-    constructor() {
-        document.addEventListener('keydown', function(e) {
-            self.handle(e);
-        });
+function modeSwitch(mode) {
+    let prev = player.mode;
+
+    if (player.mode == mode) {
+        player.mode = 'none';
+    }
+    else {
+        player.mode = mode;
     }
 
-    // Handles keys according to their keybinds
-    handle(e) {
-        switch (e.key) {
-            case 'W':
-                // Move up
-                break;
-            case 'S':
-                // Move down
-                break;
-            case 'A':
-                // Crouch
-                break;
-            case 'D':
-                // Move right
-                break;
-            case 'F':
-                // Interact
-                break;
-        }
-    }
+    console.log(`Switched ${prev} to ${player.mode}.`)
 }
 
-// TODO: Keybinding, settings screen
+document.addEventListener('keydown', function (e) {
+    switch (e.key) {
+        case 'w':
+            // Move up
+            break;
+        case 's':
+            // Move down
+            break;
+        case 'a':
+            // Crouch
+            break;
+        case 'd':
+            // Move right
+            break;
+        case 'f':
+            // Build
+            modeSwitch('building');
+            break;
+        case 'e':
+            // Build Wires
+            modeSwitch('wire');
+    }
+});
+
+// TODO: keybinding, settings screen

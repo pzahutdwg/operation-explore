@@ -3,29 +3,18 @@
 
 <head>
     <title>Operation Explore</title>
-    <script src="scripts/tile.js"></script>
-    <script src="scripts/camera.js"></script>
-    
-    <script>
-        // Small debug script
-
-        // // Check if Tile's x, y coordinate detection within a tilesheet is accturate
-        // let test = new Tile(1, 1, 1, 2, 'img/tiles/tiles.png');
-        // let otherTest = new Tile(1, 1, 1, 0, 'img/tiles/tiles.png');
-        // console.log(test.tileX, test.tileY);
-        // console.log(otherTest.tileX, otherTest.tileY);
-
-    </script>
-
 </head>
 
 <body>
     <canvas id="game" width=800 height=600></canvas>
-</body>
 
-<script>
-    const canvas = document.getElementById('game');
-    const ctx = canvas.getContext('2d');
-</script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/tile.js"></script>
+    <script src="scripts/camera.js"></script>
+    <script src="scripts/keys.js"></script>
+    <script src="scripts/wires.js"></script>
+
+</body>
 
 </html>
