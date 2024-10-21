@@ -11,7 +11,7 @@ buildOutline.src = 'img/tiles/outline.png'
 const player = new Player(400, 300, 0, 100, 'img/sprites/person_placeholder.png', []);
 
 let tiles = [];
-
+let wires = [];
 
 function main() {
 
@@ -52,9 +52,13 @@ function main() {
         }
     }
 
-    // Show the build outline
+    for (var i = 0; i < wires.length; i++) {
+        wires[i].draw();
+    }
+
+    //! Show the build outline AFTER EVERYTHING ELSE
     if (player.mode == 'building') {
-        ctx.drawImage(buildOutline, mouseX - 16, mouseY - 16)
+        ctx.drawImage(buildOutline, mouseX - 16, mouseY - 16);
     }
 
     requestAnimationFrame(main);

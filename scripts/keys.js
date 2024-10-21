@@ -1,3 +1,15 @@
+function modeSwitch(mode) {
+    let prev = player.mode;
+
+    if (player.mode == mode) {
+        player.mode = 'none';
+    }
+    else {
+        player.mode = mode;
+    }
+
+    console.log(`Switched ${prev} to ${player.mode}.`)
+}
 
 document.addEventListener('keydown', function (e) {
     switch (e.key) {
@@ -14,18 +26,12 @@ document.addEventListener('keydown', function (e) {
             // Move right
             break;
         case 'f':
-            console.log(player.mode)
-
-            if (player.mode == 'building') {
-                player.mode = 'none';
-            } 
-            else 
-            {
-                player.mode = 'building';
-            }
-
-            console.log(player.mode);
+            // Build
+            modeSwitch('building');
             break;
+        case 'e':
+            // Build Wires
+            modeSwitch('wire');
     }
 });
 

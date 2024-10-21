@@ -16,5 +16,24 @@ class Wire {
 
         // Length of the wire
         // TODO this.length
+
+        this.startImg = new Image();
+        this.endImg = new Image();
+        this.startImg.src = 'img/sprites/wire_start.png';
+        this.endImg.src = 'img/sprites/wire_end.png';
     }
+
+    checkPlaceCondition() {
+        if (Math.sqrt((canvas.width / 2 - mouseX) ** 2 + (canvas.height / 2 - mouseY) ** 2) <= player.buildRad) {
+            return true;
+        } else { return false; }
+    }
+
+    //TODO Physics
+
+    draw() {
+        ctx.drawImage(this.startImg, this.startX, this.startY);
+        ctx.drawImage(this.endImg, this.endX, this.endY);
+    }
+
 }
