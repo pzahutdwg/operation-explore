@@ -16,6 +16,7 @@ let wireStartY = 0
 canvas.addEventListener('mousedown', (e) => {
 
     if (player.mode == 'none') {
+        console.log(`Switched from ${player.mode} to aiming.`);
         player.mode = 'aiming';
     }
     else if (player.mode == 'wire') {
@@ -27,17 +28,14 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mouseup', () => {
 
     if (player.mode == 'aiming') {
+        console.log(`Switched from ${player.mode} to none.`);
         player.mode = 'none'
         cameraX = 0;
         cameraY = 0;
     }
 
     else if (player.mode == 'wire') {
-        let wire = new Wire( wireStartX, wireStartY, mouseX, mouseY ) 
-
-        if (wire.checkPlaceCondition() == true) {
-            wires.push(wire)
-        }
+        wires.push(new Rope(wireStartX - 9, wireStartY - 7, mouseX - 9, mouseY - 7, Math.sqrt((wireStartX - mouseX) ** 2 + (wireStartY - mouseY) ** 2) / 8, 5));
     }
 })
 

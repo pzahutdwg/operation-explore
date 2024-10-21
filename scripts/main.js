@@ -56,6 +56,11 @@ function main() {
         wires[i].draw();
     }
 
+    for (var i = 0; i < wires.length; i++) {
+        wires[i].update();
+        wires[i].draw();
+    }
+
     //! Show the build outlines AFTER EVERYTHING ELSE
     if (player.mode == 'building') {
         ctx.drawImage(buildOutline, mouseX - 26, mouseY - 26);
