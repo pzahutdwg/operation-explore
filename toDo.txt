@@ -59,6 +59,8 @@ Player
 Planets
 
     Biomes
+    
+        Cool colors
 
     Friendly
 
