@@ -15,8 +15,7 @@ let wires = [];
 
 function main() {
 
-    ctx.fillStyle = "rgba(255,255,255)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.height)
 
     // Ordered by z position
 
@@ -53,10 +52,6 @@ function main() {
     }
 
     for (var i = 0; i < wires.length; i++) {
-        wires[i].draw();
-    }
-
-    for (var i = 0; i < wires.length; i++) {
         wires[i].update();
         wires[i].draw();
     }
@@ -66,7 +61,7 @@ function main() {
         ctx.drawImage(buildOutline, mouseX - 26, mouseY - 26);
     }
     else if (player.mode == 'wire') {
-
+        // TODO: Show what is connected to what
     }
 
     requestAnimationFrame(main);

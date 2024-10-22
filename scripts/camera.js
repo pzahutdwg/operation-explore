@@ -34,8 +34,8 @@ canvas.addEventListener('mouseup', () => {
         cameraY = 0;
     }
 
-    else if (player.mode == 'wire') {
-        wires.push(new Rope(wireStartX - 9, wireStartY - 7, mouseX - 9, mouseY - 7, Math.sqrt((wireStartX - mouseX) ** 2 + (wireStartY - mouseY) ** 2) / 8, 5));
+    else if (player.mode == 'wire' && Math.sqrt((wireStartX - mouseX) ** 2 + (wireStartY - mouseY) ** 2) > 1) {
+        wires.push(new Rope(wireStartX - 8, wireStartY - 8, mouseX - 8, mouseY - 8, Math.sqrt((wireStartX - mouseX) ** 2 + (wireStartY - mouseY) ** 2) / 8, 5));
     }
 })
 

@@ -95,6 +95,11 @@ class Rope {
         let dx = (endX - startX) / (segments - 1);
         let dy = (endY - startY) / (segments - 1);
 
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
+
         for (let i = 0; i < segments; i++) {
             // Calculate the position of each point along the line between start and end
             let x = startX + i * dx;
@@ -109,6 +114,12 @@ class Rope {
         for (let i = 0; i < segments - 1; i++) {
             this.constraints.push(new Constraint(this.points[i], this.points[i + 1], segmentLength));
         }
+
+        this.start = new Image();
+        this.end = new Image();
+        this.start.src = 'img/sprites/wire_start.png';
+        this.end.src = 'img/sprites/wire_end.png';
+        
     }
 
     update() {
@@ -131,13 +142,15 @@ class Rope {
     draw() {
         // Draw the rope
         ctx.beginPath();
-        ctx.moveTo(this.points[0].x, this.points[0].y);
+        ctx.moveTo(this.points[0].x - cameraX, this.points[0].y - cameraY);
 
         this.points.forEach(point => {
-            ctx.lineTo(point.x, point.y);
+            ctx.lineTo(point.x - cameraX, point.y - cameraY);
         });
 
         ctx.stroke();
+        ctx.drawImage(this.start, this.startX - cameraX - 16, this.startY - cameraY - 16)
+        ctx.drawImage(this.end, this.endX - cameraX - 16, this.endY - cameraY - 16)
     }
 }
 
