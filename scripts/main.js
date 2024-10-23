@@ -13,6 +13,8 @@ const player = new Player(400, 300, 0, 100, 'img/sprites/person_placeholder.png'
 let tiles = [];
 let wires = [];
 
+let currentPlanet = new Planet(5, 100)
+
 function main() {
 
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height)

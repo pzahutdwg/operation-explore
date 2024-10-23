@@ -13,12 +13,19 @@ class Player {
         this.inv = inv;
 
         this.mode = 'none';
-        
+
         // Build radius
         this.buildRad = 100
 
         this.img = new Image();
         this.img.src = img;
+
+    }
+
+    step() {
+
+        // Physics
+        
 
     }
 
