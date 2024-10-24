@@ -46,6 +46,10 @@ Player
 
     Mouse Also Controls Camera
 
+    Fast paced movement, tilt the sprite of the alien guy in the direction hes moving
+
+    Jet pack on an astronaut suit? only can float for a limited time, upgrading it could give it a longer time floating.
+
     Arsenal
 
         GTA Style weapon wheel?
@@ -55,6 +59,8 @@ Player
         Grenades
 
         Weapon Upgrades? it will help give more customization and give more content if we go with a small Arsenal.
+
+
 
 Planets
 
