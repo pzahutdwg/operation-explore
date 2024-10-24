@@ -50,6 +50,8 @@ Player
 
     Jet pack on an astronaut suit? only can float for a limited time, upgrading it could give it a longer time floating.
 
+    Any suit the alien has on the antennas will stick out of the helmet
+
     Arsenal
 
         GTA Style weapon wheel?
