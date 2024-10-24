@@ -24,8 +24,7 @@ class Player {
 
     step() {
 
-        // Physics
-        
+        this.x += this.xMom       
 
     }
 

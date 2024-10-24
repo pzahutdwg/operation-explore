@@ -1,4 +1,4 @@
-class Tile {
+class Block {
     constructor(x, y, z, tile, sheet) {
 
         this.x = x;
@@ -31,10 +31,10 @@ class Tile {
     }
 }
 
-class Sending extends Tile {
+class Sending extends Block {
     // TODO
 }
 
-class Recieving extends Tile {
+class Recieving extends Block {
     // TODO
 }

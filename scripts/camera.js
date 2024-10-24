@@ -1,18 +1,21 @@
 // Camera follows a player and it's mouse
 // Handles tile placement too
 
+while (!go) {console.log(go)}
+
 let mouseX = 0
 let mouseY = 0
 
 canvas.addEventListener('click', (e) => {
     if (player.mode == 'building') {
-        tiles.push(new Tile(e.clientX - 26, e.clientY - 26, 0, 0, 'img/tiles/tiles.png'))
+        blocks.push(new Block(e.clientX - 26, e.clientY - 26, 0, 0, 'img/tiles/tiles.png'))
     }
 
 })
 
 let wireStartX = 0
 let wireStartY = 0
+
 canvas.addEventListener('mousedown', (e) => {
 
     if (player.mode == 'none') {
@@ -52,5 +55,11 @@ canvas.addEventListener('mousemove', (e) => {
         mouseY = e.clientY;
     }
 })
+
+//  Follow player
+function updateCamera() {
+    cameraX = player.x - canvas.width
+    cameraY = player.y - canvas.height
+}
 
 // TODO: Linear <insert nerd word>

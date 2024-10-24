@@ -14,22 +14,32 @@ function modeSwitch(mode) {
 document.addEventListener('keydown', function (e) {
     switch (e.key) {
         case 'w':
+
             // Move up
             break;
         case 's':
+
             // Move down
             break;
         case 'a':
-            // Crouch
+
+            if (player.xMom > -player.speed) {
+                player.xMom -= 1
+            }
             break;
         case 'd':
-            // Move right
+
+            if (player.xMom < player.speed) {
+                player.xMom += 1
+            }
             break;
         case 'f':
+
             // Build
             modeSwitch('building');
             break;
         case 'e':
+            
             // Build Wires
             modeSwitch('wire');
     }

@@ -8,48 +8,53 @@ let cameraY = 0;
 const buildOutline = new Image()
 buildOutline.src = 'img/tiles/outline.png'
 
-const player = new Player(400, 300, 0, 100, 'img/sprites/person_placeholder.png', []);
+const player = new Player(400, 300, 10, 100, 'img/sprites/person_placeholder.png', []);
 
-let tiles = [];
+let blocks = [];
 let wires = [];
 
 let currentPlanet = new Planet(5, 100)
 
-function main() {
+function step() {
+    player.step()
+    updateCamera()
+}
+
+function draw() {
 
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height)
 
     // Ordered by z position
 
     // z = 1
-    // Draw the tiles
-    for (var i = 0; i < tiles.length; i++) {
-        let tile = tiles[i];
+    // Draw the blocks
+    for (var i = 0; i < blocks.length; i++) {
+        let block = blocks[i];
 
-        if (tile.z == 1) {
-            tile.draw();
+        if (block.z == 1) {
+            block.draw();
         }
     }
 
     // z = 0
-    // Draw the tiles
-    for (var i = 0; i < tiles.length; i++) {
-        let tile = tiles[i];
+    // Draw the blocks
+    for (var i = 0; i < blocks.length; i++) {
+        let block = blocks[i];
 
-        if (tile.z == 0) {
-            tile.draw();
+        if (block.z == 0) {
+            block.draw();
         }
     }
 
     player.draw();
 
     // z = -1
-    // Draw the tiles
-    for (var i = 0; i < tiles.length; i++) {
-        let tile = tiles[i];
+    // Draw the blocks
+    for (var i = 0; i < blocks.length; i++) {
+        let block = blocks[i];
 
-        if (tile.z == -1) {
-            tile.draw();
+        if (block.z == -1) {
+            block.draw();
         }
     }
 
@@ -66,8 +71,11 @@ function main() {
         // TODO: Show what is connected to what
     }
 
-    requestAnimationFrame(main);
-
+}
+function main() {
+    step()
+    draw()
+    requestAnimationFrame(main)
 }
 
 main();
