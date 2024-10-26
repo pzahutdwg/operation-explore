@@ -24,11 +24,14 @@ class Player {
 
     step() {
 
-        this.x += this.xMom       
+        this.x += this.xMom  
+        this.y += this.yMom     
 
     }
 
     draw() {
-        ctx.drawImage(this.img, this.x - cameraX - 26, this.y - cameraY - 42);
+        ctx.drawImage(this.img, 0, 0, 32, 32, this.x - cameraX - 26, this.y - cameraY - 42, 64, 64);
     }
 }
+
+const player = new Player(400, 300, 10, 100, 'img/sprites/red_alien_suit.png', []);

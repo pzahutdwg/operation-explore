@@ -11,15 +11,29 @@ function modeSwitch(mode) {
     console.log(`Switched ${prev} to ${player.mode}.`)
 }
 
-document.addEventListener('keydown', function (e) {
-    switch (e.key) {
-        case 'w':
+let currentKeyDown = 'none'
 
-            // Move up
+document.addEventListener('keydown', function (e) {
+    currentKeyDown = e.key;
+});
+
+document.addEventListener('keyup', function(e){
+    if (currentKeyDown == e.key) {
+        currentKeyDown = 'none';
+    }
+})
+
+function getAction(key) {
+    switch (key) {
+        case 'w':
+            if (player.yMom > -player.speed) {
+                player.yMom -= 1
+            }
             break;
         case 's':
-
-            // Move down
+            if (player.yMom < player.speed) {
+                player.yMom += 1
+            }
             break;
         case 'a':
 
@@ -42,7 +56,10 @@ document.addEventListener('keydown', function (e) {
             
             // Build Wires
             modeSwitch('wire');
+            break;
     }
-});
+}
+
+
 
 // TODO: keybinding, settings screen

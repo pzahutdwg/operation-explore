@@ -1,8 +1,5 @@
 // Camera follows a player and it's mouse
 // Handles tile placement too
-
-while (!go) {console.log(go)}
-
 let mouseX = 0
 let mouseY = 0
 
@@ -55,11 +52,11 @@ canvas.addEventListener('mousemove', (e) => {
         mouseY = e.clientY;
     }
 })
-
+/*
 //  Follow player
 function updateCamera() {
     cameraX = player.x - canvas.width
     cameraY = player.y - canvas.height
 }
-
+*/
 // TODO: Linear <insert nerd word>

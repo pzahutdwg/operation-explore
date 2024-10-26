@@ -1,23 +1,19 @@
 // Setup stuff
-const canvas = document.getElementById('game');
-const ctx = canvas.getContext('2d');
-
 let cameraX = 0;
 let cameraY = 0;
 
 const buildOutline = new Image()
 buildOutline.src = 'img/tiles/outline.png'
 
-const player = new Player(400, 300, 10, 100, 'img/sprites/person_placeholder.png', []);
-
 let blocks = [];
 let wires = [];
 
-let currentPlanet = new Planet(5, 100)
+let currentPlanet = new Planet(5, 100);
 
 function step() {
-    player.step()
-    updateCamera()
+    getAction(currentKeyDown);
+    player.step();
+    //updateCamera();
 }
 
 function draw() {
