@@ -1,26 +1,30 @@
 function modeSwitch(mode) {
-    let prev = player.mode;
 
-    if (player.mode == mode) {
+    if (player.mode == mode && keysReset) {
         player.mode = 'none';
+        keysReset = false;
     }
-    else {
+    else if (keysReset){
         player.mode = mode;
+        keysReset = false;
     }
-
-    console.log(`Switched ${prev} to ${player.mode}.`)
 }
 
-let currentKeyDown = 'none'
+let keysDown = [];
+let keysReset = true;
 
 document.addEventListener('keydown', function (e) {
     currentKeyDown = e.key;
+    if (!keysDown.includes(e.key)) {
+        keysDown.push(e.key);
+    }
 });
 
 document.addEventListener('keyup', function(e){
-    if (currentKeyDown == e.key) {
-        currentKeyDown = 'none';
+    if (keysDown.includes(e.key)) {
+        keysDown.splice(keysDown.indexOf(e.key), 1);
     }
+    keysReset = true;
 })
 
 function getAction(key) {
@@ -36,30 +40,24 @@ function getAction(key) {
             }
             break;
         case 'a':
-
             if (player.xMom > -player.speed) {
                 player.xMom -= 1
             }
             break;
         case 'd':
-
             if (player.xMom < player.speed) {
                 player.xMom += 1
             }
             break;
         case 'f':
-
             // Build
             modeSwitch('building');
             break;
         case 'e':
-            
             // Build Wires
             modeSwitch('wire');
             break;
     }
 }
-
-
 
 // TODO: keybinding, settings screen

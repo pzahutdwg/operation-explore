@@ -9,9 +9,18 @@ let blocks = [];
 let wires = [];
 
 let currentPlanet = new Planet(5, 100);
+let now = Date.now();
+let lastTime = now;
+let dt;
+function step() 
+{
+    now = Date.now();
+    dt = (now - lastTime) / 25;
+    lastTime = now;
 
-function step() {
-    getAction(currentKeyDown);
+    for (let key of keysDown) {
+        getAction(key);
+    }
     player.step();
     //updateCamera();
 }
@@ -24,9 +33,7 @@ function draw() {
 
     // z = 1
     // Draw the blocks
-    for (var i = 0; i < blocks.length; i++) {
-        let block = blocks[i];
-
+    for (let block of blocks) {
         if (block.z == 1) {
             block.draw();
         }
@@ -34,25 +41,23 @@ function draw() {
 
     // z = 0
     // Draw the blocks
-    for (var i = 0; i < blocks.length; i++) {
-        let block = blocks[i];
-
+    for (let block of blocks) {
         if (block.z == 0) {
             block.draw();
         }
     }
 
+
     player.draw();
 
     // z = -1
     // Draw the blocks
-    for (var i = 0; i < blocks.length; i++) {
-        let block = blocks[i];
-
+    for (let block of blocks) {
         if (block.z == -1) {
             block.draw();
         }
     }
+
 
     for (var i = 0; i < wires.length; i++) {
         wires[i].update();

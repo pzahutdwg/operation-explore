@@ -24,9 +24,9 @@ class Player {
 
     step() {
 
-        this.x += this.xMom  
-        this.y += this.yMom     
-
+        this.x += this.xMom * dt;
+        this.y += this.yMom * dt;
+        
     }
 
     draw() {

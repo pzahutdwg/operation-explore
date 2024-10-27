@@ -16,7 +16,6 @@ let wireStartY = 0
 canvas.addEventListener('mousedown', (e) => {
 
     if (player.mode == 'none') {
-        console.log(`Switched from ${player.mode} to aiming.`);
         player.mode = 'aiming';
     }
     else if (player.mode == 'wire') {
@@ -28,7 +27,6 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mouseup', () => {
 
     if (player.mode == 'aiming') {
-        console.log(`Switched from ${player.mode} to none.`);
         player.mode = 'none'
         cameraX = 0;
         cameraY = 0;
@@ -53,7 +51,7 @@ canvas.addEventListener('mousemove', (e) => {
     }
 })
 /*
-//  Follow player
+Follow player
 function updateCamera() {
     cameraX = player.x - canvas.width
     cameraY = player.y - canvas.height
