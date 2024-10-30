@@ -27,13 +27,19 @@ class Player {
         this.x += this.xMom * dt;
         this.y += this.yMom * dt;
 
-        cameraX = this.x - canvas.width / 2;
-        cameraY = this.y - canvas.height / 2;
-        
+        if (this.mode != 'aiming') {
+            cameraX = this.x - canvas.width / 2;
+            cameraY = this.y - canvas.height / 2;
+        }
+
     }
 
     draw() {
-        ctx.drawImage(this.img, 0, 0, 32, 32, this.x - cameraX - 26, this.y - cameraY - 42, 64, 64);
+    this.onScreenX = this.x - cameraX - 26;
+    this.onScreenY = this.y - cameraY - 42;
+
+
+        ctx.drawImage(this.img, 0, 0, 32, 32, this.onScreenX, this.onScreenY, 64, 64);
     }
 }
 

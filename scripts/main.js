@@ -24,7 +24,6 @@ function step()
         getAction(key);
     }
     player.step();
-    //updateCamera();
 }
 
 function draw() {
@@ -68,10 +67,10 @@ function draw() {
 
     //! Show the build outlines AFTER EVERYTHING ELSE
     if (player.mode == 'building') {
-        ctx.drawImage(buildOutline, mouseX - 26, mouseY - 26);
+        ctx.drawImage(buildOutline, mouseX - 26, mouseY);
     }
     else if (player.mode == 'wire') {
-        ctx.drawImage(wireOutline, mouseX - 26, mouseY - 26);
+        ctx.drawImage(wireOutline, mouseX - 24, mouseY - 4);
     }
 
 }

@@ -57,7 +57,7 @@ function getAction(key) {
             if (Math.abs(player.yMom) > 0) {
                 player.yMom /= 1.1
             }
-            
+            break;
         case 'f':
             // Build
             modeSwitch('building');
