@@ -4,6 +4,8 @@ let cameraY = 0;
 
 const buildOutline = new Image()
 buildOutline.src = 'img/tiles/outline.png'
+const wireOutline = new Image()
+wireOutline.src = 'img/sprites/wire_start.png'
 
 let blocks = [];
 let wires = [];
@@ -59,9 +61,9 @@ function draw() {
     }
 
 
-    for (var i = 0; i < wires.length; i++) {
-        wires[i].update();
-        wires[i].draw();
+    for (let wire of wires) {
+        wire.update();
+        wire.draw();
     }
 
     //! Show the build outlines AFTER EVERYTHING ELSE
@@ -69,7 +71,7 @@ function draw() {
         ctx.drawImage(buildOutline, mouseX - 26, mouseY - 26);
     }
     else if (player.mode == 'wire') {
-        // TODO: Show what is connected to what
+        ctx.drawImage(wireOutline, mouseX - 26, mouseY - 26);
     }
 
 }

@@ -26,6 +26,9 @@ class Player {
 
         this.x += this.xMom * dt;
         this.y += this.yMom * dt;
+
+        cameraX = this.x - canvas.width / 2;
+        cameraY = this.y - canvas.height / 2;
         
     }
 
