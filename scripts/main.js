@@ -67,14 +67,15 @@ function draw() {
 
     //! Show the build outlines AFTER EVERYTHING ELSE
     if (player.mode == 'building') {
-        ctx.drawImage(buildOutline, mouseX - 26, mouseY);
+        ctx.drawImage(buildOutline, mouseX - 24, mouseY - 24);
     }
     else if (player.mode == 'wire') {
-        ctx.drawImage(wireOutline, mouseX - 24, mouseY - 4);
+        ctx.drawImage(wireOutline, mouseX - 24, mouseY - 24);
     }
 
 }
 function main() {
+    ////console.log(keysDown)
     step()
     draw()
     requestAnimationFrame(main)

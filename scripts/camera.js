@@ -5,7 +5,7 @@ let mouseY
 
 canvas.addEventListener('click', (e) => {
     if (player.mode == 'building') {
-        blocks.push(new Block(e.clientX + cameraX - 26, e.clientY + cameraY, 0, 0, 'img/tiles/tiles.png'))
+        blocks.push(new Block(e.clientX + cameraX - 24, e.clientY + cameraY - 24, 0, 0, 'img/tiles/tiles.png'))
     }
 
 })
@@ -19,8 +19,8 @@ canvas.addEventListener('mousedown', (e) => {
         player.mode = 'aiming';
     }
     else if (player.mode == 'wire') {
-        wireStartX = e.clientX - 8 + cameraX
-        wireStartY = e.clientY - 8 + cameraY
+        wireStartX = e.clientX + cameraX - 8
+        wireStartY = e.clientY + cameraY - 28
     }
 })
 
@@ -33,12 +33,13 @@ canvas.addEventListener('mouseup', (e) => {
     }
 
     else if (player.mode == 'wire' &&
-    Math.sqrt((wireStartX - mouseX + cameraX) ** 2 + (wireStartY - mouseY + cameraY) ** 2) > 1) 
+    Math.sqrt((wireStartX - e.clientX + cameraX - 8) ** 2 + (wireStartY - e.clientY + cameraY - 8) ** 2) - 40 > 1) 
     {
         wires.push(new Rope(wireStartX, wireStartY + 20,
             e.clientX + cameraX - 8,
-            e.clientY + cameraY + 10,
-            Math.sqrt((wireStartX - mouseX + cameraX) ** 2 + (wireStartY - mouseY + cameraY) ** 2) / 8, 5));
+            e.clientY + cameraY - 8,
+            (Math.sqrt((wireStartX + e.clientX + cameraX - 8) ** 2 + (wireStartY + e.clientY + cameraY - 8) ** 2) - 40) / 25,
+            5));
     }
 })
 

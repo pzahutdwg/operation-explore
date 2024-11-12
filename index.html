@@ -3,20 +3,32 @@
 
 <head>
     <title>Operation Explore</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <canvas id="game" width=800 height=600></canvas>
-
+    <canvas id="game"></canvas>
 </body>
 
 <script>
 
-// canvas
-const canvas = document.getElementById('game')
-const ctx = canvas.getContext('2d')
+    // canvas
+    const canvas = document.getElementById('game')
+    const ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
 
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+    })
 </script>
+
 
 <script src="scripts/player.js"></script>
 <script src="scripts/planet.js"></script>
