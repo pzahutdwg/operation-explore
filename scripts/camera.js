@@ -38,7 +38,7 @@ canvas.addEventListener('mouseup', (e) => {
         wires.push(new Rope(wireStartX, wireStartY + 20,
             e.clientX + cameraX - 8,
             e.clientY + cameraY - 8,
-            (Math.sqrt((wireStartX + e.clientX + cameraX - 8) ** 2 + (wireStartY + e.clientY + cameraY - 8) ** 2) - 40) / 25,
+            (Math.sqrt((wireStartX - e.clientX + cameraX - 8) ** 2 + (wireStartY - e.clientY + cameraY - 8) ** 2) - 40) / 25,
             5));
     }
 })
